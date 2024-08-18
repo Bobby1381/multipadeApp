@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Square Multipage application</title>
+    <style>
+        *{
+            font-size: 40px;
+
+        }
+        .nav{
+            background-color: black;
+            border: 10px;
+        }
+        .nav a{
+            text-decoration: none;
+            color: white;
+            margin: 40px;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+        </div>
+        <h1>Square finder Application</h1>
+        <form onsubmit="check()">
+            <input type="number"   id="num" step="any" placeholder="enter a number">
+            <br><br>
+            <input type="submit" value="Square find">
+            
+        </form>
+    </center>
+    <script>
+        function check(){
+            event.preventDefault();
+        let num=document.getElementById("num");
+        let msg=document.getElementById("msg");
+        if(num.value===""){
+            alert("enter a integer");
+            msg.innerHTML="";
+            num.focus();
+            return;
+
+        }
+        let n= parseFloat(num.value);
+        let r=n**2;
+        localStorage.setItem("res",r.toFixed(2));
+        window.location.href="result.html";
+        
+        }
+    </script>
+</body>
+</html>

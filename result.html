@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        *{
+            font-size: 40px;
+            
+        }
+        .nav{
+            background-color: black;
+            border: 10px;
+        }
+        .nav a{
+            text-decoration: none;
+            color: white;
+            margin: 40px;
+
+        }
+        .par{
+            height: 500px;
+            width: 70%;
+        }
+        .para{
+            border: 10px solid black;
+            border-radius: 20px;
+            height: 50%;
+        }
+        h1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body> <center>
+    <div class="nav">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+
+    </div>
+    <h1><u>Result</u></h1>
+
+    <h2 id="msg"></h2>
+   
+    
+</center>
+
+   
+    <script>
+        let msg=document.getElementById("msg")
+        let r=localStorage.getItem("res")
+        msg.innerHTML=r;
+    </script>
+    
+</body>
+</html>
